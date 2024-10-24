@@ -17,9 +17,9 @@ namespace HospitalAPI.Models.Class
         //Foreign Key
         [Required, ForeignKey("Hospital")]
         public int HospitalId { get; set; }
-        [Required, StringLength(15,ErrorMessage ="Please maximum type of digit 15")]
+        [Required, StringLength(15), Display(Name = "Phone")]
         public string Phone { get; set; }
-        [Required, RegularExpression(@"^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$", ErrorMessage = "Your Email is not valid.")]
+        [Required, StringLength(50), Display(Name = "Email")]
         public string Email { get; set; }
 
         //Nev
